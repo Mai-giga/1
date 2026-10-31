@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f2ef">
+  <meta name="description" content="从公开渠道收集并核验 AI 行业资讯的每日简报。">
+  <title>AI 简报 — 公开信息 · 可追溯事实</title>
+  <style>
+    :root{--paper:#f3f2ef;--white:#fff;--ink:#171715;--muted:#777670;--line:#d8d7d2;--soft:#e9e8e4;--accent:#c8ff00;--serif:Georgia,"Noto Serif SC","Songti SC",serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.shell{max-width:1440px;margin:0 auto;padding:0 52px}.topline{height:46px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.topline strong{color:var(--ink);font-weight:650}.topline .status{display:flex;align-items:center;gap:9px}.dot{width:6px;height:6px;border-radius:50%;background:#769600;display:inline-block}.masthead{display:flex;align-items:flex-end;justify-content:space-between;padding:28px 0 26px;border-bottom:1px solid var(--ink)}.brand{display:flex;align-items:center;gap:14px}.brand-mark{width:42px;height:42px;background:var(--ink);color:var(--accent);display:grid;place-items:center;font:700 20px var(--serif);transform:rotate(-3deg)}.brand-name{font:500 28px/1 var(--serif);letter-spacing:-.04em}.brand-sub{margin-top:7px;font-size:9px;letter-spacing:.23em;color:var(--muted);text-transform:uppercase}.nav{display:flex;gap:28px;font-size:11px;color:#55544f;letter-spacing:.05em}.nav a:first-child{color:var(--ink)}.issue{display:flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.issue .bar{width:32px;height:1px;background:var(--ink)}
+    .hero{padding:68px 0 48px;display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:end}.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:23px;height:1px;background:var(--ink)}h1{font:400 clamp(52px,8vw,104px)/.98 var(--serif);letter-spacing:-.065em;margin:22px 0 18px;max-width:900px}h1 em{font-style:normal;color:#888780}.hero-copy{font:400 15px/1.9 var(--serif);color:#55544f;max-width:410px;margin:0 0 5px}.hero-meta{display:flex;gap:22px;margin-top:28px;font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.hero-meta b{color:var(--ink);font-weight:600}.hero-side{border-left:1px solid var(--line);padding-left:30px;margin-bottom:4px}.side-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}.side-head{font:400 23px/1.25 var(--serif);letter-spacing:-.02em;margin-bottom:12px}.side-note{font-size:12px;line-height:1.8;color:#65645e}.side-note strong{color:var(--ink);font-weight:600}.marquee{background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:14px 19px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;overflow:hidden}.marquee .flash{color:var(--accent);font-size:14px}.marquee .divider{color:#666}.marquee .right{margin-left:auto;color:#aaa;font-size:9px;white-space:nowrap}
+    .section-head{display:flex;justify-content:space-between;align-items:end;padding:43px 0 17px;border-bottom:1px solid var(--ink)}.section-head h2{font:400 31px/1 var(--serif);letter-spacing:-.035em;margin:0}.section-head h2 span{font:500 10px var(--sans);letter-spacing:.12em;color:var(--muted);margin-left:10px}.edition{font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.filters{display:flex;align-items:center;gap:7px;padding:15px 0 19px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:transparent;padding:8px 12px;border-radius:2px;font:500 10px var(--sans);color:#62615b;cursor:pointer;transition:.2s}.filter:hover,.filter.active{background:var(--ink);color:white;border-color:var(--ink)}.filter-count{margin-left:auto;font-size:10px;letter-spacing:.1em;color:var(--muted)}
+    .feature-grid{display:grid;grid-template-columns:1.5fr .85fr;gap:16px;margin-bottom:16px}.card{background:var(--white);border:1px solid var(--line);position:relative;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-2px);border-color:#aaa9a2}.lead{min-height:330px;padding:33px 36px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.lead:after{content:"AI";position:absolute;right:16px;bottom:-61px;font:400 220px/.8 var(--serif);letter-spacing:-.1em;color:#f3f2ef;pointer-events:none}.lead>*{position:relative;z-index:1}.card-top{display:flex;justify-content:space-between;align-items:center}.source-tag{font-size:9px;letter-spacing:.13em;text-transform:uppercase;border:1px solid var(--line);padding:6px 9px;color:#595851}.verify{font-size:9px;color:#687d16;letter-spacing:.1em;display:flex;align-items:center;gap:6px}.verify:before{content:"✓";width:15px;height:15px;display:grid;place-items:center;border:1px solid #b3c679;border-radius:50%;font-size:9px}.card h3{font:400 31px/1.28 var(--serif);letter-spacing:-.035em;max-width:740px;margin:32px 0 14px}.card .dek{font-size:13px;line-height:1.75;color:#66655f;max-width:670px;margin:0}.lead-foot{display:flex;gap:20px;align-items:center;margin-top:27px;font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}.lead-foot b{color:var(--ink);font-weight:600}.side-feature{padding:28px 27px;display:flex;flex-direction:column;min-height:330px}.side-feature .number{font:400 52px/.9 var(--serif);color:#cfcec7;letter-spacing:-.06em}.side-feature h3{font:400 23px/1.35 var(--serif);margin:24px 0 12px}.side-feature .dek{font-size:12px;line-height:1.8}.side-feature .lead-foot{margin-top:auto;padding-top:22px}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.news-card{padding:22px 23px 20px;min-height:290px;display:flex;flex-direction:column}.news-card .card-top{align-items:flex-start}.news-card .verify{font-size:8px;white-space:nowrap}.news-card h3{font:400 21px/1.4 var(--serif);letter-spacing:-.025em;margin:23px 0 10px}.news-card .dek{font-size:11px;line-height:1.8;color:#686760;margin:0}.facts{border-top:1px solid var(--soft);margin-top:17px;padding-top:13px;display:grid;gap:7px}.fact{display:grid;grid-template-columns:38px 1fr;gap:7px;font-size:10px;line-height:1.65;color:#55544f}.fact b{font-weight:600;color:#85847e;letter-spacing:.04em}.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:17px;font-size:9px;letter-spacing:.09em;color:var(--muted);text-transform:uppercase}.read{display:inline-flex;align-items:center;gap:6px;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}.read:hover{color:#677b0c;border-color:#677b0c}.source-line{font-size:9px;letter-spacing:.04em;text-transform:none;color:#777670}.hidden{display:none!important}
+    .method{margin:58px 0 0;background:#e9e8e4;padding:27px 30px;display:grid;grid-template-columns:.65fr 1.35fr;gap:32px;align-items:start}.method h2{font:400 23px var(--serif);margin:0}.method p{font-size:11px;line-height:1.8;color:#57564f;margin:0}.method strong{color:var(--ink)}.channels{padding:42px 0 55px;display:grid;grid-template-columns:1fr 1fr;gap:50px;border-bottom:1px solid var(--line)}.channels h2{font:400 26px var(--serif);margin:0 0 9px}.channels p{font-size:11px;line-height:1.75;color:#777670;max-width:450px;margin:0}.channel-list{display:flex;flex-wrap:wrap;align-content:start;gap:8px}.channel{border:1px solid var(--line);padding:9px 11px;font-size:10px;color:#54534d}.channel.active{background:var(--ink);border-color:var(--ink);color:#fff}.channel.pending{border-style:dashed;color:#898880}.footer{padding:24px 0 33px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#85847e}.footer b{color:var(--ink);font-weight:500}.footer .foot-right{max-width:430px;text-align:right;letter-spacing:.04em;text-transform:none;line-height:1.65}
+    @media(max-width:900px){.shell{padding:0 25px}.hero{gap:35px}.news-grid{grid-template-columns:repeat(2,1fr)}.nav{gap:15px}.feature-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.shell{padding:0 17px}.topline{font-size:8px}.masthead{align-items:center;padding:21px 0}.brand-name{font-size:24px}.nav{display:none}.issue{font-size:8px}.hero{display:block;padding:48px 0 35px}.hero-copy{font-size:14px}.hero-side{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin-top:30px}.side-head{font-size:21px}.marquee{padding:13px 12px;gap:10px}.marquee .right{display:none}.section-head{padding-top:35px}.section-head h2{font-size:27px}.edition{font-size:8px}.feature-grid{grid-template-columns:1fr}.lead{min-height:320px;padding:25px 22px}.card h3{font-size:26px}.side-feature{min-height:260px}.news-grid{grid-template-columns:1fr}.news-card{min-height:260px;padding:20px}.method{grid-template-columns:1fr;padding:22px;gap:12px;margin-top:40px}.channels{grid-template-columns:1fr;gap:22px;padding:34px 0}.footer{display:block}.footer .foot-right{text-align:left;margin-top:14px}.filter-count{width:100%;margin:5px 0 0}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="topline"><div><strong>AI / FIELD NOTES</strong>　独立资讯简报</div><div class="status"><i class="dot"></i>公开来源 · 人工核验</div></div>
+    <header class="masthead">
+      <a class="brand" href="#top" aria-label="AI简报首页"><span class="brand-mark">A.</span><span><span class="brand-name">AI 简报</span><span class="brand-sub">The Intelligence Brief</span></span></a>
+      <nav class="nav"><a href="#brief">今日简报</a><a href="#sources">来源网络</a><a href="#method">核验方法</a></nav>
+      <div class="issue"><span class="bar"></span>Vol. 001　/　2026.10</div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">AI NEWS DESK　·　SATURDAY, OCTOBER 31</div>
+          <h1>看见变化，<br><em>也看见出处。</em></h1>
+          <p class="hero-copy">从公开渠道收集 AI 产业动态。每条资讯都尽量回到发布方原文，标明背景、事实与来源，让信息值得追溯。</p>
+          <div class="hero-meta"><span><b>08</b> 条精选</span><span><b>07</b> 个首发渠道</span><span>更新于 <b>10.31</b></span></div>
+        </div>
+        <aside class="hero-side">
+          <div class="side-label">Editor’s note　/　编辑手记</div>
+          <div class="side-head">本期焦点<br>从模型能力走向工作流与基础设施。</div>
+          <div class="side-note">企业智能体、多模型编排、搜索任务交付同时升温。对于尚在预览或提案阶段的消息，页面保留其<strong>官方状态说明</strong>，不将计划写成已全面上线。</div>
+        </aside>
+      </section>
+
+      <div class="marquee"><span class="flash">✳</span><span>Today’s brief</span><span class="divider">/</span><span>模型与智能体</span><span class="divider">·</span><span>搜索与内容生态</span><span class="divider">·</span><span>公开信息，可追溯事实</span><span class="right">SCROLL TO EXPLORE　↓</span></div>
+
+      <section id="brief">
+        <div class="section-head"><h2>今日精选 <span>THE DAILY CUT</span></h2><div class="edition">2026 年 10 月 31 日　/　按发布时间倒序</div></div>
+        <div class="filters" role="group" aria-label="按主题筛选资讯">
+          <button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="product">模型与产品</button><button class="filter" data-filter="industry">产业与商业</button><button class="filter" data-filter="platform">平台与生态</button>
+          <span class="filter-count" id="count">SHOWING 08 STORIES</span>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card lead story" data-category="platform" data-date="2026-10-30">
+            <div class="card-top"><span class="source-tag">OpenAI　/　公开网标准</span><span class="verify">官方原文已核验</span></div>
+            <div><h3>OpenAI 将支持网站表达 AI 训练偏好的共同信号</h3><p class="dek">OpenAI 表示将支持一项写入 robots.txt 的通用信号，帮助网站运营者向多家 AI 服务商表达内容用于训练的偏好；具体实施细节将在未来数月公布。</p></div>
+            <div class="lead-foot"><span><b>10.30</b>　2026</span><span>背景　网络内容使用与站长控制</span><a class="read" href="https://openai.com/index/helping-websites-express-ai-training-preferences/" target="_blank" rel="noopener">查看原文 ↗</a></div>
+          </article>
+          <article class="card side-feature story" data-category="product" data-date="2026-10-30">
+            <div class="card-top"><span class="number">01</span><span class="verify">双源交叉核验</span></div>
+            <div><h3>百度 APP 搜索升级：从单次问答转向任务交付</h3><p class="dek">10 月 30 日沟通会公布搜索框、AI 镜头、GUI 可视化与互动应用等方向更新。复杂任务可多步检索整理；长期跟踪需用户确认。</p><div class="facts"><div class="fact"><b>背景</b><span>AI 搜索竞争从问答效果扩展到任务处理、多模态交互与信息溯源。</span></div><div class="fact"><b>内容</b><span>四类产品升级；搜索 AI API 同步迭代。</span></div><div class="fact"><b>渠道</b><span>百度产品沟通会；中新网与《证券日报》报道交叉核验。</span></div></div></div>
+            <div class="lead-foot"><span><b>10.30</b>　2026</span><a class="read" href="https://www.chinanews.com/cj/2026/10-30/10723499.shtml" target="_blank" rel="noopener">来源：中新网 ↗</a></div>
+          </article>
+        </div>
+
+        <div class="news-grid">
+          <article class="card news-card story" data-category="industry" data-date="2026-10-29">
+            <div class="card-top"><span class="source-tag">腾讯　/　企业 AI</span><span class="verify">官方原文</span></div>
+            <h3>腾讯云展示 WorkBuddy 企业能力，预告 Hy4 系列</h3><p class="dek">在 2026 腾讯全球数字生态大会上，腾讯云公布企业级 AI 办公智能体进展，并预告混元 Hy4 与 Hy4 Flash 即将推出。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>企业 AI 与云服务全球化竞争升温。</span></div><div class="fact"><b>内容</b><span>聚焦企业工作流落地，模型版本仍按“即将推出”表述。</span></div><div class="fact"><b>渠道</b><span>腾讯官网新闻中心 · 10 月 29 日</span></div></div>
+            <div class="card-foot"><span class="source-line">腾讯官方发布</span><a class="read" href="https://www.tencent.com/zh-cn/tencent-cloud-accelerates-international-growth-advances-enterprise-ai-and-expands-global-partnerships/" target="_blank" rel="noopener">原文 ↗</a></div>
+          </article>
+
+          <article class="card news-card story" data-category="industry" data-date="2026-10-28">
+            <div class="card-top"><span class="source-tag">Microsoft　/　智能体</span><span class="verify">官方原文</span></div>
+            <h3>Microsoft Copilot harness 面向 Foundry 开放</h3><p class="dek">微软称其多模型智能体运行框架已用于 Copilot 多个产品，并将通过 Microsoft Foundry 提供托管能力。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>企业 Agent 需要稳定的编排、工具调用与治理层。</span></div><div class="fact"><b>内容</b><span>微软称框架支持 20 多种前沿模型，并强调权限、沙箱与成本控制。</span></div><div class="fact"><b>渠道</b><span>Official Microsoft Blog · 10 月 28 日</span></div></div>
+            <div class="card-foot"><span class="source-line">微软官方博客</span><a class="read" href="https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/" target="_blank" rel="noopener">原文 ↗</a></div>
+          </article>
+
+          <article class="card news-card story" data-category="product" data-date="2026-10-27">
+            <div class="card-top"><span class="source-tag">Google DeepMind　/　世界模型</span><span class="verify">官方原文</span></div>
+            <h3>Genie 4 开始向受邀测试者开放研究预览</h3><p class="dek">Google DeepMind 发布新一代交互式世界模拟模型，可用自然语言实时改变场景；当前仍是研究预览。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>可交互模拟可用于机器人、智能体训练与新型交互体验。</span></div><div class="fact"><b>内容</b><span>官方指出长时一致性、物理交互和文字渲染仍有局限。</span></div><div class="fact"><b>渠道</b><span>Google DeepMind Blog · 10 月 27 日</span></div></div>
+            <div class="card-foot"><span class="source-line">Google DeepMind 官方博客</span><a class="read" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener">原文 ↗</a></div>
+          </article>
+
+          <article class="card news-card story" data-category="industry" data-date="2026-10-26">
+            <div class="card-top"><span class="source-tag">Anthropic　/　公司动态</span><span class="verify">官方原文已核验</span></div>
+            <h3>Anthropic 向 SEC 提交拟 IPO 注册文件</h3><p class="dek">公司公告称已提交 S-1 注册声明，拟在纳斯达克挂牌，股票代码拟为 ANT。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>大型 AI 公司融资与资本市场关注持续升温。</span></div><div class="fact"><b>内容</b><span>发行股数和价格区间尚未确定；注册声明尚未生效，不能视为已完成上市。</span></div><div class="fact"><b>渠道</b><span>Anthropic Newsroom · 10 月 26 日</span></div></div>
+            <div class="card-foot"><span class="source-line">Anthropic 官方公告</span><a class="read" href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener">原文 ↗</a></div>
+          </article>
+
+          <article class="card news-card story" data-category="platform" data-date="2026-10-19">
+            <div class="card-top"><span class="source-tag">微博　/　内容生态</span><span class="verify">媒体交叉核验</span></div>
+            <h3>微博公布推荐、视频与热点生态升级方向</h3><p class="dek">微博 V 影响力大会提出强化原创与优质视频；热点板块正在内测 AI 总编 Agent，辅助创作者发现选题角度。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>平台希望将内容分发从短期曝光延伸至长期价值。</span></div><div class="fact"><b>内容</b><span>AI 总编仍在内测；报道来自新华网对大会的现场整理。</span></div><div class="fact"><b>渠道</b><span>新华网报道微博大会 · 10 月 19 日</span></div></div>
+            <div class="card-foot"><span class="source-line">新华网 · 引述微博大会</span><a class="read" href="https://www.xinhuanet.com/tech/20261019/23303a52a61b4b08a72d449ab3032619/c.html" target="_blank" rel="noopener">来源 ↗</a></div>
+          </article>
+
+          <article class="card news-card story" data-category="product" data-date="2026-10-08">
+            <div class="card-top"><span class="source-tag">Google Cloud　/　办公智能体</span><span class="verify">官方原文</span></div>
+            <h3>Google 发布面向工作的通用 Gemini agent</h3><p class="dek">Google Cloud 宣布一个可连接企业系统、使用技能和工具、处理知识工作与代码任务的工作智能体。</p>
+            <div class="facts"><div class="fact"><b>背景</b><span>企业 AI 从问答助手向跨应用工作流发展。</span></div><div class="fact"><b>内容</b><span>公告强调模型路由、支出控制、身份权限与治理能力。</span></div><div class="fact"><b>渠道</b><span>Google Cloud Blog · 10 月 8 日</span></div></div>
+            <div class="card-foot"><span class="source-line">Google Cloud 官方博客</span><a class="read" href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026" target="_blank" rel="noopener">原文 ↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="method" class="method"><h2>怎样核验<br>一条 AI 新闻</h2><p><strong>先找原始发布。</strong>优先引用公司新闻中心、产品博客、开发者文档或官方账号。<strong>再核时间与状态。</strong>区分已上线、预览、内测、计划和传闻。<strong>交叉检查关键事实。</strong>来自社交媒体或转述的消息，尽量找第二个独立来源；未能确认的数字与说法不写成事实。本期百度升级由中新网与《证券日报》报道交叉核对；微博生态消息按新华网对大会的报道呈现。摘要中的观点性背景为编辑归纳。</p></section>
+
+      <section id="sources" class="channels"><div><h2>来源网络 <span style="font:500 10px var(--sans);letter-spacing:.12em;color:var(--muted)">SOURCE RADAR</span></h2><p>持续关注全球模型厂商、科技公司官方新闻中心，以及中国公开社区与公众号内容。只有能确认发布日期、主体和原始出处的消息才进入精选。</p></div><div class="channel-list"><span class="channel active">OpenAI</span><span class="channel active">Google / DeepMind</span><span class="channel active">Microsoft</span><span class="channel active">Anthropic</span><span class="channel active">百度</span><span class="channel active">腾讯</span><span class="channel active">微博 · 公开报道</span><span class="channel pending">知乎 · 持续监测</span><span class="channel pending">微信公众号 · 公开文章监测</span></div></section>
+    </main>
+    <footer class="footer"><div><b>AI 简报</b>　/　Open signals. Clear sources.</div><div class="foot-right">本页是 2026.10.31 的静态预览样稿，并非自动更新的新闻服务。来源链接直达原文或报道；平台侧未核实的传言不纳入。</div></footer>
+  </div>
+  <script>
+    const buttons=[...document.querySelectorAll('.filter')], stories=[...document.querySelectorAll('.story')], count=document.getElementById('count');
+    function setFilter(value){let visible=0;stories.forEach(card=>{const show=value==='all'||card.dataset.category===value;card.classList.toggle('hidden',!show);if(show)visible++});count.textContent=`SHOWING ${String(visible).padStart(2,'0')} STORIES`;buttons.forEach(button=>{const active=button.dataset.filter===value;button.classList.toggle('active',active);button.setAttribute('aria-pressed',active?'true':'false')})}
+    buttons.forEach(button=>button.addEventListener('click',()=>setFilter(button.dataset.filter)));
+  </script>
+</body>
+</html>
+
